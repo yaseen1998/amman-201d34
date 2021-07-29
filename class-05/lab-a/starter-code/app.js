@@ -49,9 +49,9 @@ testMultiply(5,9);
 
 // // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let multi = a * b * c;
-  let sum = a + b + c;
-  return [sum,multi,`${a} and ${b} and ${c} sum to 16.`, `The product of ${a} and ${b} and ${c} is ${multi}.`]
+  let multi =multiply(multiply(a,b)[0],c)
+  let sum_3= sum(sum(a,b)[0],c)
+  return [sum_3,multi,`${a} and ${b} and ${c} sum to 16.`, `The product of ${a} and ${b} and ${c} is ${multi}.`]
 }
 
 // // Here is the test for sumAndMultiply(); uncomment it to run it

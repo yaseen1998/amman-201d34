@@ -128,22 +128,22 @@ testMultiplyArray(testArray);
 // Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // // Write your code here
-// let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-// function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-//   let multi_array = 1;
-//   let str = '';
-//   for(let i = 0 ;i<dynamicArray.length;i++){
-//     multi_array *= dynamicArray[i];
-//     str += dynamicArray[i]+',';
-//   }
+function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  let multi_array = 1;
+  let str = '';
+  for(let i = 0 ;i<dynamicArray.length;i++){
+    multi_array *= dynamicArray[i];
+    str += dynamicArray[i]+',';
+  }
   
-//   // console.log([multi_array,'The numbers '+str.slice(0, -1)+' have a product of '+multi_array+'.'])
-//   return [multi_array,'The numbers '+str.slice(0, -1)+' have a product of '+multi_array+'.']
+  // console.log([multi_array,'The numbers '+str.slice(0, -1)+' have a product of '+multi_array+'.'])
+  return [multi_array,'The numbers '+str.slice(0, -1)+' have a product of '+multi_array+'.']
 
-// }
+}
 
 // // Here is the test for multiplyArray(); uncomment it to run it
-// //testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
 // // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.

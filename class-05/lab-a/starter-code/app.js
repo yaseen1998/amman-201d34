@@ -49,9 +49,9 @@ testMultiply(5,9);
 
 // // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let multi = a * b * c;
-  let sum = a + b + c;
-  return [sum,multi,`${a} and ${b} and ${c} sum to 16.`, `The product of ${a} and ${b} and ${c} is ${multi}.`]
+  let multi =multiply(multiply(a,b)[0],c)[0]
+  let sum_3= sum(sum(a,b)[0],c)[0]
+  return [sum_3,multi,`${a} and ${b} and ${c} sum to 16.`, `The product of ${a} and ${b} and ${c} is ${multi}.`]
 }
 
 // // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -73,10 +73,10 @@ testSumAndMultiply(4,7,5);
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let sum_array = 0
-  for(let i = 0 ;i<sumArr.length;i++){
-    sum_array += sumArr[i];
-  }
+
+  
+    let sum_array =sum(sum(sumArr[0],sumArr[1])[0],sumArr[2])[0]
+  
   return [sum_array,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum_array} is their sum.`]
 }
 
@@ -98,10 +98,10 @@ testSumArray(testArray);
 
 // // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let multi_array = 1
-  for(let i = 0 ;i<multArr.length;i++){
-    multi_array *= multArr[i];
-  }
+  
+  
+    let multi_array =multiply(multiply(multArr[0],multArr[1])[0],multArr[2])[0]
+  
   return [multi_array,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi_array}.`]
 }
 
@@ -134,12 +134,12 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let multi_array = 1;
   let str = '';
   for(let i = 0 ;i<dynamicArray.length;i++){
-    multi_array *= dynamicArray[i];
-    str += dynamicArray[i]+',';
+    multi_array = multiply(multi_array,dynamicArray[i])[0];
+    str = sumAndMultiply(str,dynamicArray[i],',')[0];
   }
   
-  // console.log([multi_array,'The numbers '+str.slice(0, -1)+' have a product of '+multi_array+'.'])
-  return [multi_array,'The numbers '+str.slice(0, -1)+' have a product of '+multi_array+'.']
+  //console.log([multi_array,`The numbers ${str.slice(0, -1)} have a product of ${multi_array}.`])
+  return [multi_array,`The numbers ${str.slice(0, -1)} have a product of ${multi_array}.`]
 
 }
 

@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let total = a + b;
-  return [total,  `The sum of ${a} and ${b} is ${total}.`];
+  return [total, `The sum of ${a} and ${b} is ${total}.`];
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -28,11 +28,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   let total = a * b;
-  return [total,  `The product of ${a} and ${b} is ${total}.`];
+  return [total, `The product of ${a} and ${b} is ${total}.`];
 }
 
 // // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -49,13 +49,13 @@ testMultiply(5,9);
 
 // // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let multi =multiply(multiply(a,b)[0],c)[0]
-  let sum_3= sum(sum(a,b)[0],c)[0]
-  return [sum_3,multi,`${a} and ${b} and ${c} sum to 16.`, `The product of ${a} and ${b} and ${c} is ${multi}.`]
+  let multi = multiply(multiply(a, b)[0], c)[0]
+  let sum_3 = sum(sum(a, b)[0], c)[0]
+  return [sum_3, multi, `${a} and ${b} and ${c} sum to 16.`, `The product of ${a} and ${b} and ${c} is ${multi}.`]
 }
 
 // // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -74,10 +74,10 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
-  
-    let sum_array =sum(sum(sumArr[0],sumArr[1])[0],sumArr[2])[0]
-  
-  return [sum_array,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum_array} is their sum.`]
+
+  let sum_array = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]
+
+  return [sum_array, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum_array} is their sum.`]
 }
 
 // // Here is the test for sumArray(); uncomment it to run it
@@ -98,11 +98,11 @@ testSumArray(testArray);
 
 // // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  
-  
-    let multi_array =multiply(multiply(multArr[0],multArr[1])[0],multArr[2])[0]
-  
-  return [multi_array,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi_array}.`]
+
+
+  let multi_array = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0]
+
+  return [multi_array, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi_array}.`]
 }
 
 
@@ -128,22 +128,22 @@ testMultiplyArray(testArray);
 // Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let multi_array = 1;
   let str = '';
-  for(let i = 0 ;i<dynamicArray.length;i++){
-    multi_array = multiply(multi_array,dynamicArray[i])[0];
-    str = sumAndMultiply(str,dynamicArray[i],',')[0];
+  for (let i = 0; i < dynamicArray.length; i=sum(i,1)[0]) {
+    multi_array = multiply(multi_array, dynamicArray[i])[0];
+    str = sumAndMultiply(str, dynamicArray[i], ',')[0];
   }
-  
+
   //console.log([multi_array,`The numbers ${str.slice(0, -1)} have a product of ${multi_array}.`])
-  return [multi_array,`The numbers ${str.slice(0, -1)} have a product of ${multi_array}.`]
+  return [multi_array, `The numbers ${str.slice(0, -1)} have a product of ${multi_array}.`]
 
 }
 
 // // Here is the test for multiplyArray(); uncomment it to run it
- testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
